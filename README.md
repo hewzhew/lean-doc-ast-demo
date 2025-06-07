@@ -143,69 +143,10 @@ Provides detailed analysis statistics:
 
 ## Example Usage Scenarios
 
-### 1. Analyze Existing Lean Documentation
+### Analyze Existing Lean Documentation
 ```bash
 python test_lean_parser.py Array.lean --output-dir array_analysis
 ```
-
-### 2. Batch Test Sample Files
-```bash
-python test_lean_parser.py --create-samples --test-samples --output-dir batch_test
-```
-
-### 3. Development and Debugging
-```bash
-# Create test samples for development
-python test_lean_parser.py --create-samples --output-dir dev_samples
-# Then test specific samples
-python test_lean_parser.py dev_samples/samples/lean_roles_test.md
-```
-
-## Project Structure
-
-```
-lean-doc-ast-demo-main/
-├── parser_new/
-│   ├── tokenizer.py         # Lexical analyzer
-│   └── syntax_parser.py     # Syntax analyzer
-├── Array.lean               # Test Lean documentation
-├── test_lean_parser.py      # Main test script
-├── README.md               # Chinese documentation
-└── README_EN.md            # This English documentation
-```
-
-## Development and Contributing
-
-### Core Components
-
-1. **Tokenizer (Lexical Analyzer)**: Breaks raw text into tokens
-2. **SyntaxParser (Syntax Analyzer)**: Builds AST tree structure
-3. **Test Framework**: Provides complete testing and analysis functionality
-
-### Extending the Parser
-
-To add support for new syntax:
-
-1. Add new TokenType and recognition patterns in `tokenizer.py`
-2. Add corresponding parsing methods in `syntax_parser.py`
-3. Update test cases to verify functionality
-
-### Debugging Tips
-
-1. Check `tokens.json` to verify lexical analysis is correct
-2. Examine `ast.json` to validate syntax tree structure
-3. Read `report.txt` for statistics and potential issues
-
-## Frequently Asked Questions
-
-**Q: What to do when parsing fails?**
-A: Check input file encoding (should be UTF-8), and review the generated report.txt for detailed error information.
-
-**Q: How to handle new Lean syntax?**
-A: First run the existing parser to see unrecognized content, then add corresponding patterns in the tokenizer.
-
-**Q: What if output files are too large?**
-A: You can modify the output options in test_lean_parser.py to generate only the needed files.
 
 ## License
 
