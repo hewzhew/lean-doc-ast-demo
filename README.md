@@ -12,6 +12,14 @@ The parser can handle complex syntax structures in Lean 4 documentation, includi
 - Definition lists
 - Various block-level and inline syntax elements
 
+## Test File Source
+
+The `Array.lean` file used for testing in this project is sourced from the official Lean 4 Reference Manual repository:
+- **Source**: [leanprover/reference-manual](https://github.com/leanprover/reference-manual/blob/main/Manual/BasicTypes/Array.lean)
+- **File**: Manual/BasicTypes/Array.lean
+
+We gratefully acknowledge the Lean community and contributors for providing this comprehensive documentation example that serves as an excellent test case for our parser.
+
 ## Quick Start
 
 ### Requirements
